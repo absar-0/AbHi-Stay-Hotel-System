@@ -1,6 +1,4 @@
-# Hotel Reservation & Room Booking System
-
-## Group Information
+##AbHi-Hotel-Mnagment-System
 
 | | |
 |---|---|
@@ -8,7 +6,7 @@
 | **Member 1** | Absar — 22P-9068 |
 | **Member 2** | Hina Rashid — 22P-9198 |
 | **Course** | Database Systems Lab |
-| **Institute** | FAST-NUCES,Peshawar |
+| **Institute** | FAST-NUCES, Peshawar |
 
 ---
 
@@ -17,15 +15,16 @@
 A full-stack Hotel Reservation & Room Booking System that allows guests to search and book rooms, receptionists to manage check-in/check-out, and admins to manage hotels, rooms, customers, and view analytics reports.
 
 **Three user roles:**
--  **Guest** — Search rooms, make bookings, cancel reservations
+- **Guest** — Search rooms, make bookings, cancel reservations
 - **Reception** — Check-in / Check-out, walk-in bookings, room availability
--  **Admin** — CRUD for hotels/rooms/customers, revenue dashboard, reports
+- **Admin** — CRUD for hotels/rooms/customers, revenue dashboard, reports
 
 ---
 
 ## GitHub Repository
 
- **https://github.com/absar-0/AbHi-Stay-Hotel_System**
+**https://github.com/absar-0/AbHi-Stay-Hotel_System**
+
 ---
 
 ## Technologies Used
@@ -41,14 +40,11 @@ A full-stack Hotel Reservation & Room Booking System that allows guests to searc
 ---
 
 ## Project Files
-
-```
 hotel-reservation-system/
 ├── index.html          ← Frontend (open in browser)
 ├── app.py              ← Python Flask backend
 ├── hotel_complete.sql  ← Database script
 └── README.md           ← This file
-```
 
 ---
 
@@ -56,7 +52,7 @@ hotel-reservation-system/
 
 ---
 
-##  OPTION A — Run Frontend Only (Easiest, No Install Needed)
+## OPTION A — Run Frontend Only (Easiest, No Install Needed)
 
 > Best for demo and viva. Everything works directly in the browser.
 
@@ -86,9 +82,8 @@ Password: type anything and press **Sign In**
 4. Finish installation
 
 To verify, open **Command Prompt** and type:
-```
 mysql -u root -p
-```
+
 Enter your password. If you see `mysql>` it is working 
 
 ---
@@ -103,9 +98,8 @@ Enter your password. If you see `mysql>` it is working
 5. Refresh the left panel — you will see the `hotel` database 
 
 **Using Command Prompt:**
-```
 mysql -u root -p < C:\path\to\your\hotel_complete.sql
-```
+
 
 ---
 
@@ -113,13 +107,12 @@ mysql -u root -p < C:\path\to\your\hotel_complete.sql
 
 1. Download from: https://www.python.org/downloads/
 2. Run the installer
-3.  **IMPORTANT:** At the bottom, tick the checkbox **"Add Python to PATH"**
+3. **IMPORTANT:** At the bottom, tick the checkbox **"Add Python to PATH"**
 4. Click **Install Now**
 
 Verify in Command Prompt:
-```
 python --version
-```
+
 Should show `Python 3.x.x` 
 
 ---
@@ -127,9 +120,8 @@ Should show `Python 3.x.x`
 ### STEP 4 — Install Required Libraries
 
 Open **Command Prompt** and run:
-```
 pip install flask flask-cors mysql-connector-python
-```
+
 Wait until you see `Successfully installed` 
 
 ---
@@ -146,86 +138,42 @@ DB_CONFIG = {
     "password": "",       # ← put your MySQL password here
     "database": "hotel",
     "autocommit": True
-}
 ```
+Add your password inside the quotes, save the file (Ctrl+S)
 
-3. Add your password inside the quotes, save the file (**Ctrl+S**)
+STEP 6 — Start the Backend
+Open Command Prompt, go to your project folder:
 
----
-
-### STEP 6 — Start the Backend
-
-Open **Command Prompt**, go to your project folder:
-```
 cd C:\Users\YourName\Desktop\hotel-reservation-system
-```
 Run:
-```
+
 python app.py
-```
 You will see:
-```
+
 * Running on http://localhost:5000
-```
 Backend is running — do not close this window.
 
----
-
-### STEP 7 — Open the App
-
+## STEP 7 — Open the App
 Open Chrome or Edge and visit:
-```
+
 http://localhost:5000
-```
-The full application loads with live MySQL data 
+The full application loads with live MySQL data
 
----
+### CRUD Operations
+Operation         Where in App                                  SQL
+CREATE            Book a room, Add customer,               Add hotelINSERT INTO ...
+READ              Search rooms, booking list,              dashboardSELECT ... JOIN ...
+UPDATE            Check-In / Check-Out changes            statusUPDATE Bookings SET ...
+DELETE            Cancel a booking                        Status set to Cancelled 
 
-##  Login Credentials
 
-| Role | Email | Password |
-|---|---|---|
-|  Guest | guest@luxestay.com | anything |
-|  Reception | reception@luxestay.com | anything |
-|  Admin | admin@luxestay.com | anything |
-
----
-
-##  CRUD Operations
-
-| Operation | Where in App | SQL |
-|---|---|---|
-| **CREATE** | Book a room, Add customer, Add hotel | `INSERT INTO ...` |
-| **READ** | Search rooms, booking list, dashboard | `SELECT ... JOIN ...` |
-| **UPDATE** | Check-In / Check-Out changes status | `UPDATE Bookings SET ...` |
-| **DELETE** | Cancel a booking | Status set to `Cancelled` |
-
----
-
-##  Common Errors & Fixes on Windows
-
-| Error | Fix |
-|---|---|
-| `python is not recognized` | Reinstall Python and tick **"Add to PATH"** |
-| `pip is not recognized` | Run CMD as Administrator → `python -m ensurepip` |
-| `Access denied for user root` | Wrong password in `app.py` DB_CONFIG |
-| `ModuleNotFoundError: flask` | Run `pip install flask flask-cors mysql-connector-python` again |
-| `Unknown database hotel` | Run `hotel_complete.sql` in MySQL Workbench first |
-| `Port 5000 already in use` | Change `port=5000` to `port=5001` in the last line of `app.py` |
-
----
-
-##  Database Tables (12 Total)
-
-| Table | Purpose |
-|---|---|
-| `Country`, `City` | Geographic reference data |
-| `Hotel_Chains`, `Hotels` | Hotel properties and chains |
-| `Room_Types`, `Rooms` | Room inventory and pricing |
-| `Customers` | Guest records |
-| `Bookings`, `Booking_Status` | Reservation management |
-| `Room_Availability` | Daily room status tracking |
-| `Daily_Room_Rates` | Dynamic pricing per day |
-| `Hotel_Features`, `Specific_Hotel_Feature` | Hotel amenities |
-
----
+ ***Database Tables (12 Total)***
+Table                                                Purpose
+"Country, City",                                  Geographic reference data
+"Hotel_Chains, Hotels",                           Hotel properties and chains
+"Room_Types, Rooms",                               Room inventory and pricing
+Customers,                                         Guest records
+"Bookings, Booking_Status",                         Reservation management
+Room_Availability,                                  Daily room status tracking
+Daily_Room_Rates,                                   Dynamic pricing per day
+"Hotel_Features, Specific_Hotel_Feature",            Hotel amenities
