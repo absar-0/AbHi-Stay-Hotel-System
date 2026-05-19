@@ -188,9 +188,9 @@
     <div id="loginFormSection">
       <p class="login-title">Sign in to your account</p>
       <div class="role-grid">
-        <button class="role-btn active" onclick="selectRole('guest',this)"><span class="icon">🧳</span>Guest</button>
-        <button class="role-btn" onclick="selectRole('reception',this)"><span class="icon">🏨</span>Reception</button>
-        <button class="role-btn" onclick="selectRole('admin',this)"><span class="icon">⚙️</span>Admin</button>
+        <button class="role-btn active" onclick="selectRole('guest',this)"><span class="icon"></span>Guest</button>
+        <button class="role-btn" onclick="selectRole('reception',this)"><span class="icon"></span>Reception</button>
+        <button class="role-btn" onclick="selectRole('admin',this)"><span class="icon"></span>Admin</button>
       </div>
       <div class="form-group"><label>Email Address</label><input type="text" id="loginUser" value="guest@luxestay.com" placeholder="name@company.com"></div>
       <div class="form-group"><label>Password</label><input type="password" id="loginPass" value="123456" placeholder="••••••••"></div>
@@ -226,22 +226,22 @@
       <div class="sidebar-brand"><div class="name">AbHi Stay</div><div class="role-badge" id="sidebarRole">Guest</div></div>
       <div class="nav-section" id="guestNav">
         <div class="nav-label">Guest Menu</div>
-        <div class="nav-item active" onclick="showPage('searchPage','guestNav')"><span class="nav-icon">🔍</span> Search Rooms</div>
-        <div class="nav-item" onclick="showPage('myBookingsPage','guestNav')"><span class="nav-icon">📋</span> My Bookings</div>
+        <div class="nav-item active" onclick="showPage('searchPage','guestNav')"><span class="nav-icon"></span> Search Rooms</div>
+        <div class="nav-item" onclick="showPage('myBookingsPage','guestNav')"><span class="nav-icon"></span> My Bookings</div>
       </div>
       <div class="nav-section" id="receptionNav" style="display:none">
         <div class="nav-label">Reception Desk</div>
-        <div class="nav-item active" onclick="showPage('checkInPage','receptionNav')"><span class="nav-icon">✅</span> Check-In / Out</div>
-        <div class="nav-item" onclick="showPage('allBookingsPage','receptionNav')"><span class="nav-icon">📅</span> All Bookings</div>
+        <div class="nav-item active" onclick="showPage('checkInPage','receptionNav')"><span class="nav-icon"></span> Check-In / Out</div>
+        <div class="nav-item" onclick="showPage('allBookingsPage','receptionNav')"><span class="nav-icon"></span> All Bookings</div>
       </div>
       <div class="nav-section" id="adminNav" style="display:none">
         <div class="nav-label">Administration</div>
-        <div class="nav-item active" onclick="showPage('dashPage','adminNav')"><span class="nav-icon">📊</span> Dashboard</div>
-        <div class="nav-item" onclick="showPage('hotelsPage','adminNav')"><span class="nav-icon">🏩</span> Hotels</div>
-        <div class="nav-item" onclick="showPage('customersPage','adminNav')"><span class="nav-icon">👤</span> Customers</div>
-        <div class="nav-item" onclick="showPage('roomsAdminPage','adminNav')"><span class="nav-icon">🚪</span> Rooms</div>
+        <div class="nav-item active" onclick="showPage('dashPage','adminNav')"><span class="nav-icon"></span> Dashboard</div>
+        <div class="nav-item" onclick="showPage('hotelsPage','adminNav')"><span class="nav-icon"></span> Hotels</div>
+        <div class="nav-item" onclick="showPage('customersPage','adminNav')"><span class="nav-icon"></span> Customers</div>
+        <div class="nav-item" onclick="showPage('roomsAdminPage','adminNav')"><span class="nav-icon"></span> Rooms</div>
       </div>
-      <div class="sidebar-footer"><button class="logout-btn" onclick="logout()">🚪 Sign Out</button></div>
+      <div class="sidebar-footer"><button class="logout-btn" onclick="logout()">Sign Out</button></div>
     </aside>
 
     <div class="main-content">
@@ -257,7 +257,7 @@
             <div class="search-field"><label>Select Hotel</label><select id="searchHotel"><option value="">Loading Hotels...</option></select></div>
             <div class="search-field"><label>Check-In</label><input type="date" id="searchCheckin"></div>
             <div class="search-field"><label>Check-Out</label><input type="date" id="searchCheckout"></div>
-            <button class="btn btn-gold" style="height:46px; width: 100%;" onclick="searchRooms()">🔍 Search Availability</button>
+            <button class="btn btn-gold" style="height:46px; width: 100%;" onclick="searchRooms()"> Search Availability</button>
           </div>
         </div>
         <div class="room-grid" id="roomGrid"></div>
@@ -321,7 +321,7 @@
         <div class="field"><label>Check-Out Date</label><input type="date" id="bookTo" disabled style="background-color: var(--cream);"></div>
       </div>
       <div style="background: var(--gold-pale); padding: 15px; border-radius: 8px; border: 1px solid rgba(217,119,6,0.2); color: #92400e; font-size: 0.9rem; margin-top: 10px;">
-        ⚠️ Booking will be finalized for logged-in Guest Account. Ensure dates are correct.
+         Booking will be finalized for logged-in Guest Account. Ensure dates are correct.
       </div>
     </div>
     <div class="modal-footer">
@@ -520,7 +520,7 @@ async function searchRooms() {
         <div class="room-img-container"><img src="${imgUrl}" alt="${r.Room_Type_Name}"></div>
         <div class="room-body">
           <h4>${r.Room_Type_Name}</h4>
-          <div class="room-details"><span>🏩 ${r.Hotel_Name}</span><span>🚪 Room ${r.Room_Number} | Floor ${Math.floor(r.Room_Number/100)}</span></div>
+          <div class="room-details"><span> ${r.Hotel_Name}</span><span>🚪 Room ${r.Room_Number} | Floor ${Math.floor(r.Room_Number/100)}</span></div>
           <div class="room-price"><span class="amount">$${r.Standard_Rate}</span><span class="per">/ night</span></div>
         </div>
         <div class="room-footer">

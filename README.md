@@ -1,4 +1,4 @@
-# 🏨 Hotel Reservation & Room Booking System
+# Hotel Reservation & Room Booking System
 
 ## Group Information
 
@@ -8,7 +8,7 @@
 | **Member 1** | Absar — 22P-9068 |
 | **Member 2** | Hina Rashid — 22P-9198 |
 | **Course** | Database Systems Lab |
-| **Institute** | FAST-NUCES, Karachi |
+| **Institute** | FAST-NUCES,Peshawar |
 
 ---
 
@@ -17,18 +17,15 @@
 A full-stack Hotel Reservation & Room Booking System that allows guests to search and book rooms, receptionists to manage check-in/check-out, and admins to manage hotels, rooms, customers, and view analytics reports.
 
 **Three user roles:**
-- 🧳 **Guest** — Search rooms, make bookings, cancel reservations
-- 🏨 **Reception** — Check-in / Check-out, walk-in bookings, room availability
-- ⚙️ **Admin** — CRUD for hotels/rooms/customers, revenue dashboard, reports
+-  **Guest** — Search rooms, make bookings, cancel reservations
+- **Reception** — Check-in / Check-out, walk-in bookings, room availability
+-  **Admin** — CRUD for hotels/rooms/customers, revenue dashboard, reports
 
 ---
 
 ## GitHub Repository
 
-🔗 **https://github.com/YOUR_USERNAME/hotel-reservation-system**
-
-> Replace with your actual GitHub link before submitting.
-
+ **https://github.com/absar-0/AbHi-Stay-Hotel_System**
 ---
 
 ## Technologies Used
@@ -55,17 +52,17 @@ hotel-reservation-system/
 
 ---
 
-# ▶️ HOW TO RUN ON WINDOWS (Step by Step)
+# HOW TO RUN ON WINDOWS (Step by Step)
 
 ---
 
-## ✅ OPTION A — Run Frontend Only (Easiest, No Install Needed)
+##  OPTION A — Run Frontend Only (Easiest, No Install Needed)
 
 > Best for demo and viva. Everything works directly in the browser.
 
 1. Find the file **`index.html`** in your project folder
 2. **Double-click** it — it opens in Chrome or Edge automatically
-3. Done ✅
+3. Done 
 
 Login with:
 
@@ -79,7 +76,7 @@ Password: type anything and press **Sign In**
 
 ---
 
-## ✅ OPTION B — Full Stack (Frontend + Python Flask + MySQL)
+## OPTION B — Full Stack (Frontend + Python Flask + MySQL)
 
 ### STEP 1 — Install MySQL
 
@@ -92,7 +89,7 @@ To verify, open **Command Prompt** and type:
 ```
 mysql -u root -p
 ```
-Enter your password. If you see `mysql>` it is working ✅
+Enter your password. If you see `mysql>` it is working 
 
 ---
 
@@ -103,7 +100,7 @@ Enter your password. If you see `mysql>` it is working ✅
 2. Go to **File → Open SQL Script**
 3. Select `hotel_complete.sql` from your project folder
 4. Press **Ctrl + Shift + Enter** to run the whole script
-5. Refresh the left panel — you will see the `hotel` database ✅
+5. Refresh the left panel — you will see the `hotel` database 
 
 **Using Command Prompt:**
 ```
@@ -116,14 +113,14 @@ mysql -u root -p < C:\path\to\your\hotel_complete.sql
 
 1. Download from: https://www.python.org/downloads/
 2. Run the installer
-3. ⚠️ **IMPORTANT:** At the bottom, tick the checkbox **"Add Python to PATH"**
+3.  **IMPORTANT:** At the bottom, tick the checkbox **"Add Python to PATH"**
 4. Click **Install Now**
 
 Verify in Command Prompt:
 ```
 python --version
 ```
-Should show `Python 3.x.x` ✅
+Should show `Python 3.x.x` 
 
 ---
 
@@ -133,7 +130,7 @@ Open **Command Prompt** and run:
 ```
 pip install flask flask-cors mysql-connector-python
 ```
-Wait until you see `Successfully installed` ✅
+Wait until you see `Successfully installed` 
 
 ---
 
@@ -170,7 +167,7 @@ You will see:
 ```
 * Running on http://localhost:5000
 ```
-✅ Backend is running — do not close this window.
+Backend is running — do not close this window.
 
 ---
 
@@ -180,21 +177,21 @@ Open Chrome or Edge and visit:
 ```
 http://localhost:5000
 ```
-The full application loads with live MySQL data ✅
+The full application loads with live MySQL data 
 
 ---
 
-## 🔐 Login Credentials
+##  Login Credentials
 
 | Role | Email | Password |
 |---|---|---|
-| 🧳 Guest | guest@luxestay.com | anything |
-| 🏨 Reception | reception@luxestay.com | anything |
-| ⚙️ Admin | admin@luxestay.com | anything |
+|  Guest | guest@luxestay.com | anything |
+|  Reception | reception@luxestay.com | anything |
+|  Admin | admin@luxestay.com | anything |
 
 ---
 
-## 📋 CRUD Operations
+##  CRUD Operations
 
 | Operation | Where in App | SQL |
 |---|---|---|
@@ -205,7 +202,7 @@ The full application loads with live MySQL data ✅
 
 ---
 
-## ⚠️ Common Errors & Fixes on Windows
+##  Common Errors & Fixes on Windows
 
 | Error | Fix |
 |---|---|
@@ -218,7 +215,7 @@ The full application loads with live MySQL data ✅
 
 ---
 
-## 🗄️ Database Tables (12 Total)
+##  Database Tables (12 Total)
 
 | Table | Purpose |
 |---|---|
@@ -232,5 +229,3 @@ The full application loads with live MySQL data ✅
 | `Hotel_Features`, `Specific_Hotel_Feature` | Hotel amenities |
 
 ---
-
-*Group 01 — Database Systems Lab — FAST-NUCES Karachi*
